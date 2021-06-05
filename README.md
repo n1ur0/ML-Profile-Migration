@@ -28,5 +28,5 @@ pip install -r requirements.txt
 Run the application:
 
 ```
-streamlit run altice_app1.py
+streamlit run profile_app.py
 ```
