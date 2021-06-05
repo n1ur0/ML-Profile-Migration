@@ -1,11 +1,23 @@
-# ML-Profile-Migration
+# ML Profile Migration Prediction
 
 
 For easier setup, please install [Anaconda](https://www.anaconda.com/).
 
 Git clone repo:
 ```
-git clone 
+git clone github.com/n1ur0/ML-Profile-Migration
+```
+
+Go to the main folder.
+
+Create a conda environment:
+```
+conda create -n profile_migration python=3.8
+```
+Activate environment:
+
+```
+conda activate profile_migration
 ```
 
 To install all packages:
