@@ -1,5 +1,6 @@
 # ML Profile Migration Prediction
 
+![demo gif](demo_git.gif)
 
 For easier setup, please install [Anaconda](https://www.anaconda.com/).
 
