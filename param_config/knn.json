@@ -1,0 +1,15 @@
+{
+    "n_neighbors": [
+        15,
+        30,
+        50
+    ],
+    "weights": [
+        "uniform",
+        "distance"
+    ],
+    "p": [
+        1,
+        2
+    ]
+}
