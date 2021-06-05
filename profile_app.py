@@ -809,29 +809,28 @@ elif option == 'Prediction - Cross Validation':
                             if clf_name == 'xgb':
                                 clf = load_models(clf_name)(params=grid_param, random_state=42)
                                 
-                            elif clf_name == 'dtree':
-                                with open(f'prediction_objs/dtree_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                            elif clf_name == 'voting':
+                                with open(f'prediction_objs/dtree_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_dtree, _, _, _, _ = comp
                                 model1 = load_models('dtree')(**best_param_fold_dtree[k_fold],
                                                               random_state=42)
 
-                                with open(f'prediction_objs/logreg_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                                with open(f'prediction_objs/logreg_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_logreg, _, _, _, _ = comp
                                 model2 = load_models('logreg')(**best_param_fold_logreg[k_fold],
                                                                random_state=42)
 
-                                with open(f'prediction_objs/ann_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                                with open(f'prediction_objs/ann_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_ann, _, _, _, _ = comp
                                 model3 = load_models('ann')(**best_param_fold_ann[k_fold],
                                                             random_state=42)
 
-                                with open(f'prediction_objs/knn_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                                with open(f'prediction_objs/knn_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_knn, _, _, _, _ = comp
-
                                 model4 = load_models('knn')(
                                     **best_param_fold_knn[k_fold])
 
@@ -859,25 +858,25 @@ elif option == 'Prediction - Cross Validation':
                                 clf = load_models(clf_name)(params=grid_param, random_state=42)
                                 
                             elif clf_name == 'voting':
-                                with open(f'prediction_objs/dtree_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                                with open(f'prediction_objs/dtree_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_dtree, _, _, _, _ = comp
                                 model1 = load_models('dtree')(**best_param_fold_dtree[k_fold],
                                                             random_state=42)
 
-                                with open(f'prediction_objs/logreg_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                                with open(f'prediction_objs/logreg_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_logreg, _, _, _, _ = comp
                                 model2 = load_models('logreg')(**best_param_fold_logreg[k_fold],
                                                             random_state=42)
 
-                                with open(f'prediction_objs/ann_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                                with open(f'prediction_objs/ann_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_ann, _, _, _, _ = comp
                                 model3 = load_models('ann')(**best_param_fold_ann[k_fold],
                                                             random_state=42)
 
-                                with open(f'prediction_objs/knn_{target}_{hyper_param}{n_rand}_missing_{missing}_objs', 'rb') as fp:
+                                with open(f'prediction_objs/knn_{target}_{hyper_param}{n_rand}_missing_{missing}_feature_selection_{check_feat_select}_SMOTE_{check_smote}_objs', 'rb') as fp:
                                     comp = pickle.load(fp)
                                     best_param_fold_knn, _, _, _, _ = comp
 
