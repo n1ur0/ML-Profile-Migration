@@ -1,0 +1,12 @@
+streamlit
+sklearn
+plotly
+numpy
+pandas
+pickle
+shap
+matplotlib
+seaborn
+graphviz
+xgboost
+chart-studio
